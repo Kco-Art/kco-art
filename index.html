@@ -5,7 +5,7 @@ title: Home
 
 <div class="row">
   <div class="col-sm-12">
-    <img class="img-fluid w-100" src="/assets/images/main.jpg">
+    <img class="img-fluid w-100" src="/images/main.jpg">
   </div>
 </div>
 
@@ -17,7 +17,7 @@ title: Home
       {% for card in site.data.home_grid %}
         <div class="card">
           {% if card.is_image %}
-            <img src="/assets/images/small/{{ card.name }}" class="card-img-top img-fluid">
+            <img src="/images/small/{{ card.name }}" class="card-img-top img-fluid">
           {% elsif card.is_post %}
             {% assign post = site.posts | where:"id", page.id  | first %}
             <div class="card-body">
