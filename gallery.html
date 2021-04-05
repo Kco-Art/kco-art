@@ -1,0 +1,12 @@
+---
+layout: default
+title: Gallery
+---
+
+<div class="card-columns">
+  {% for image in site.data.gallery %}
+    <div class="card">
+      <img src="/assets/images{{ image.path }}" class="card-img-top img-fluid">
+    </div>
+  {% endfor %}
+</div>

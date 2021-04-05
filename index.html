@@ -12,17 +12,18 @@ title: Home
 <div class="row">
 
   <div class="col-sm-10 offset-sm-1">
-
     <div id="central-grid" class="card-columns">
 
       {% for card in site.data.home_grid %}
         <div class="card">
           {% if card.is_image %}
             <img src="/assets/images/small/{{ card.name }}" class="card-img-top img-fluid">
-          {% else %}
+          {% elsif card.is_post %}
+            {% assign post = site.posts | where:"id", page.id  | first %}
             <div class="card-body">
-              <h5 class="card-title">{{ card.title }}</h5>
-              <p class="card-text">{{ card.text }}</p>
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.excerpt }}</p>
+              <a href="{{post.url}}" class="card-link">Read more</a>
             </div>
           {% endif %}
         </div>

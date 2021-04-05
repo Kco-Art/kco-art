@@ -11,7 +11,21 @@
     {% include navbar.html %}
     <div class="container-fluid">
       <div class="col-sm-10 offset-sm-1">
-        {{ content }}
+
+        <div class="row">
+          {{ content }}
+        </div>
+
+        <div class="row">
+          <div class="card-columns">
+            {% for image in page.images %}
+              <div class="card">
+                <img src="/assets/images/{{ image }}" class="card-img-top img-fluid">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
       </div>
     </div>
     {% include footer.html %}
