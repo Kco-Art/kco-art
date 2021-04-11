@@ -4,7 +4,8 @@ title: Gallery
 ---
 
 <div class="card-columns">
-  {% for image in site.data.gallery %}
+  {% for element in site.data.gallery %}
+    {% assign image = site.data.images | where: "identifier", element | first %}
     <div class="card">
       <img src="/images{{ image.path }}" class="card-img-top img-fluid">
     </div>

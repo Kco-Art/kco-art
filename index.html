@@ -18,13 +18,14 @@ title: Home
         <div class="card">
           {% assign post = site.posts | where: "title", card.title | first %}
 
-          {% assign image = post.images | first %}
+          {% assign imageName = post.images | first %}
+          {% assign image = site.data.images | where: "identifier", imageName | first %}
 
           <a href="{{post.url}}" class="card-link">
             {% if card.image %}
               <img src="/images{{ card.image }}" class="card-img-top img-fluid">
             {% else %}
-              <img src="/images{{ image }}" class="card-img-top img-fluid">
+              <img src="/images{{ image.path }}" class="card-img-top img-fluid">
             {% endif %}
           </a>
 

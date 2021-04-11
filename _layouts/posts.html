@@ -11,22 +11,24 @@
   <body>
     {% include navbar.html %}
     <div class="container-fluid">
-      <div class="col-sm-10 offset-sm-1">
+      <div class="col-sm-8 offset-sm-2">
 
-        <div class="row">
+        <div class="row mb-5">
           <h1>
             {{ page.title }}
           </h1>
         </div>
-        <div class="row">
+        <div class="row mb-5">
             {{ content }}
         </div>
 
         <div class="row">
           <div class="card-columns">
-            {% for image in page.images %}
+            {% for imageName in page.images %}
+            {% assign image = site.data.images | where: "identifier", imageName | first %}
+
               <div class="card">
-                <img src="/images/{{ image }}" class="card-img-top img-fluid">
+                <img src="/images{{ image.path }}" class="card-img-top img-fluid">
               </div>
             {% endfor %}
           </div>

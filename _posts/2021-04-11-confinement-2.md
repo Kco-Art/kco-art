@@ -1,7 +1,7 @@
 ---
 title: Confinement 2
 images:
-- "/confinement1/Kco_Confinement_3.jpg"
+- confinement_3
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
