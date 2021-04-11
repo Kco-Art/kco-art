@@ -21,6 +21,7 @@ $(window).scroll(function() {
 (function ($) {
   var $grid = $('#central-grid').masonry({
       itemSelector: '.card-item',
-      gutter: 15
+      gutter: 15,
+      percentPosition: true
   });
 })(jQuery);

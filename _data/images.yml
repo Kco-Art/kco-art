@@ -26,8 +26,6 @@
   path: /confinement/kco_confinement_3.jpg
 - identifier: planetes
   path: /confinement/planetes.jpg
-- identifier: royaume
-  path: /san-remo/sanremo_3.png
 - identifier: veron
   path: /confinement/veron.jpg
 - identifier: vortex
@@ -38,3 +36,5 @@
   path: /san-remo/sanremo_1.png
 - identifier: sanremo_2
   path: /san-remo/sanremo_2.jpg
+- identifier: sanremo_3
+  path: /san-remo/sanremo_3.png

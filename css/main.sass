@@ -41,13 +41,26 @@ a
     .nav-link
       font-size: 1.5rem
 
-#index-page
+#central-grid
+  margin-top: 50px
+  h5
+    font-size: 2.25rem
+
+@media only screen and (max-width: 900px)
   #central-grid
-    margin-top: 50px
-    h5
-      font-size: 2.25rem
     .card-item
-      width: 30%
+      width: 100%
+
+@media only screen and (min-width: 900px) and (max-width: 1200px)
+  #central-grid
+    .card-item
+      width: 49%
+
+
+@media only screen and (min-width: 1200px)
+  #central-grid
+    .card-item
+      width: 32%
 
 #posts
   #images
