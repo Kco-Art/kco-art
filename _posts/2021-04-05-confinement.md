@@ -1,6 +1,7 @@
 ---
 title: Confinement 1.0
 images:
+- vortex
 - galaxy
 ---
 
