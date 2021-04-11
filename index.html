@@ -15,6 +15,7 @@ title: Home
     <div id="central-grid" class="card-columns">
 
       {% for card in site.data.home_grid %}
+        <div class="card-item">
         <div class="card">
           {% assign post = site.posts | where: "title", card.title | first %}
 
@@ -36,6 +37,7 @@ title: Home
             <p class="card-text">{{ post.excerpt }}</p>
           </div>
         </div>
+      </div>
       {% endfor %}
     </div>
   </div>

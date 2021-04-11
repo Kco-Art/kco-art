@@ -18,3 +18,9 @@ $(window).scroll(function() {
   }
 });
 
+(function ($) {
+  var $grid = $('#central-grid').masonry({
+      itemSelector: '.card-item',
+      gutter: 15
+  });
+})(jQuery);
