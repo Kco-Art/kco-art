@@ -1,20 +1,24 @@
 - is_image: true
-  name: vortex.jpg
+  name: /small/vortex.jpg
+  identifier: 2
 
 - is_post: true
-  id: 2
+  identifier: 2
 
 - is_image: true
-  name: veron.jpg
+  name: /small/veron.jpg
 
 - is_image: true
-  name: royaume.png
+  name: /small/royaume.png
 
 - is_image: true
-  name: galaxy.jpg
+  name: /small/galaxy.jpg
 
 - is_image: true
-  name: matisse-henri-la-pompadour.jpg
+  name: /small/matisse-henri-la-pompadour.jpg
 
 - is_image: true
-  name: experience.png
+  name: /small/experience.png
+
+- is_image: true
+  name: /small/KCO_Confinement1_2.png
