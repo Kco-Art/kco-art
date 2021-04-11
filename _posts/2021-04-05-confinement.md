@@ -2,7 +2,7 @@
 title: Confinement 1.0
 identifier: 2
 images:
-- "/small/KCO_Confinement1_2.png"
+- "/confinement1/KCO_Confinement1_2.png"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
