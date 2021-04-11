@@ -29,9 +29,10 @@ title: Home
           </a>
 
           <div class="card-body">
-            <h5 class="card-title">{{ post.title }}</h5>
+            <h5 class="card-title">
+              <a href="{{post.url}}">{{ post.title }}</a>
+            </h5>
             <p class="card-text">{{ post.excerpt }}</p>
-            <a href="{{post.url}}" class="card-link btn btn-light">Lire plus</a>
           </div>
         </div>
       {% endfor %}
