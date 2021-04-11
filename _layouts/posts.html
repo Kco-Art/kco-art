@@ -10,30 +10,34 @@
   </head>
   <body>
     {% include navbar.html %}
-    <div class="container-fluid">
-      <div class="col-sm-8 offset-sm-2">
+    <div id="posts" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2">
 
-        <div class="row mb-5">
-          <h1>
-            {{ page.title }}
-          </h1>
-        </div>
-        <div class="row mb-5">
-            {{ content }}
-        </div>
-
-        <div class="row">
-          <div class="card-columns">
-            {% for imageName in page.images %}
-            {% assign image = site.data.images | where: "identifier", imageName | first %}
-
-              <div class="card">
-                <img src="/images{{ image.path }}" class="card-img-top img-fluid">
-              </div>
-            {% endfor %}
+          <div class="row mb-5">
+            <h1>
+              {{ page.title }}
+            </h1>
+          </div>
+          <div class="row mb-5">
+              {{ content }}
           </div>
         </div>
+      </div>
+      <div id="images" class="row pt-5 pb-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="row">
+            <div class="card-columns">
+              {% for imageName in page.images %}
+              {% assign image = site.data.images | where: "identifier", imageName | first %}
 
+                <div class="card">
+                  <img src="/images{{ image.path }}" class="card-img-top img-fluid">
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
       </div>
       {% include footer.html %}
     </div>
