@@ -34,3 +34,7 @@
   path: /confinement/vortex.jpg
 - identifier: experience
   path: /pensees/experience.png
+- identifier: sanremo_1
+  path: /san-remo/sanremo_1.png
+- identifier: sanremo_2
+  path: /san-remo/sanremo_2.jpg
