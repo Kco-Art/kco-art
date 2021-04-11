@@ -7,7 +7,6 @@ $(window).scroll(function() {
     document.body.clientHeight, document.documentElement.clientHeight
   );
 
-  console.log(pageHeight, screenHeight)
   if (pageHeight - screenHeight < 200 ) {
     return
   }
