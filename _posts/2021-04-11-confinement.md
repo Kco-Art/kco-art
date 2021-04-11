@@ -1,7 +1,7 @@
 ---
-title: Confinement 1.0
+title: Confinement
 images:
-- "/confinement1/galaxy.jpg"
+- "/confinement1/KCO_Confinement_1Bis.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

@@ -16,35 +16,23 @@ title: Home
 
       {% for card in site.data.home_grid %}
         <div class="card">
-          {% assign post = site.posts | where: "identifier", card.identifier | first %}
+          {% assign post = site.posts | where: "title", card.title | first %}
 
-          {% if card.is_image %}
-            {% if card.identifier %}
-              <a href="{{post.url}}" class="card-link">
-                <img src="/images{{ card.name }}" class="card-img-top img-fluid">
-              </a>
+          {% assign image = post.images | first %}
+
+          <a href="{{post.url}}" class="card-link">
+            {% if card.image %}
+              <img src="/images{{ card.image }}" class="card-img-top img-fluid">
             {% else %}
-              <img src="/images{{ card.name }}" class="card-img-top img-fluid">
+              <img src="/images{{ image }}" class="card-img-top img-fluid">
             {% endif %}
+          </a>
 
-          {% elsif card.is_post %}
-            {% assign image = post.images | first %}
-
-            <a href="{{post.url}}" class="card-link">
-              {% if card.image %}
-                <img src="/images{{ card.image }}" class="card-img-top img-fluid">
-              {% else %}
-                <img src="/images{{ image }}" class="card-img-top img-fluid">
-              {% endif %}
-            </a>
-
-            <div class="card-body">
-              <h5 class="card-title">{{ post.title }}</h5>
-              <p class="card-text">{{ post.excerpt }}</p>
-              <a href="{{post.url}}" class="card-link">Read more</a>
-            </div>
-          {% endif %}
-
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.excerpt }}</p>
+            <a href="{{post.url}}" class="card-link btn btn-light">Lire plus</a>
+          </div>
         </div>
       {% endfor %}
     </div>

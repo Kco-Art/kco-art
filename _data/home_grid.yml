@@ -1,24 +1,6 @@
-- is_image: true
-  name: /confinement1/vortex.jpg
-  identifier: 2
-
-- is_post: true
-  identifier: 2
-
-- is_image: true
-  name: /confinement1/veron.jpg
-
-- is_image: true
-  name: /confinement1/royaume.png
-
-- is_image: true
-  name: /confinement1/galaxy.jpg
-
-- is_image: true
-  name: /pensees/matisse-henri-la-pompadour.jpg
-
-- is_image: true
-  name: /pensees/experience.png
-
-- is_image: true
-  name: /confinement1/KCO_Confinement1_2.png
+- title: Confinement
+- title: Lorem2
+- title: Lorem
+- title: Confinement 2
+- title: Confinement 1.0
+- title: Welcome to Jekyll!
