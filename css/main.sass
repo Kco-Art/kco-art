@@ -1,6 +1,8 @@
 ---
 ---
 
+$pink: #EA21AA
+
 body
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter"
 
@@ -9,6 +11,8 @@ h1, h2, h3, h4, h5
 
 a
   color: black
+  &:hover
+    color: $pink
 
 .header
   background: white
@@ -29,7 +33,7 @@ a
   .nav-item
     &.active
       .nav-link
-        color: blue
+        color: $pink
 
     .nav-link
       font-size: 1.5rem
