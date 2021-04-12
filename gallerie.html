@@ -3,15 +3,13 @@ layout: default
 title: Gallery
 ---
 
-<div class="row">
-  <div class="card-columns id="central-grid">
-    {% for element in site.data.gallery %}
-      {% assign image = site.data.images | where: "identifier", element | first %}
-      <div class="card-item">
-        <div class="card">
-          <img src="/images{{ image.path }}" title="{{image.identifier}}" class="card-img-top img-fluid">
-        </div>
+<div id="central-grid" class="masonry">
+  {% for element in site.data.gallery %}
+    {% assign image = site.data.images | where: "identifier", element | first %}
+    <div class="card-item mb-3">
+      <div class="card">
+        <img src="/images{{ image.path }}" title="{{image.identifier}}" class="card-img-top">
       </div>
-    {% endfor %}
-  </div>
+    </div>
+  {% endfor %}
 </div>

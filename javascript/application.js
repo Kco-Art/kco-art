@@ -19,7 +19,7 @@ $(window).scroll(function() {
 });
 
 (function ($) {
-  var $grid = $('#central-grid').imagesLoaded( function() {
+  var $grid = $('.masonry').imagesLoaded( function() {
     $grid.masonry({
       itemSelector: '.card-item',
       gutter: 15,

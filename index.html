@@ -12,32 +12,32 @@ title: Home
 <div class="row">
 
   <div class="col-sm-10 offset-sm-1">
-    <div id="central-grid" class="card-columns">
+    <div id="central-grid" class="masonry">
 
       {% for card in site.data.home_grid %}
-        <div class="card-item">
-        <div class="card">
-          {% assign post = site.posts | where: "title", card.title | first %}
+        <div class="card-item mb-3">
+          <div class="card">
+            {% assign post = site.posts | where: "title", card.title | first %}
 
-          {% assign imageName = post.images | first %}
-          {% assign image = site.data.images | where: "identifier", imageName | first %}
+            {% assign imageName = post.images | first %}
+            {% assign image = site.data.images | where: "identifier", imageName | first %}
 
-          <a href="{{post.url}}" class="card-link">
-            {% if card.image %}
-              <img src="/images{{ card.image }}" class="card-img-top img-fluid">
-            {% else %}
-              <img src="/images{{ image.path }}" class="card-img-top img-fluid">
-            {% endif %}
-          </a>
+            <a href="{{post.url}}" class="card-link">
+              {% if card.image %}
+                <img src="/images{{ card.image }}" class="card-img-top">
+              {% else %}
+                <img src="/images{{ image.path }}" class="card-img-top">
+              {% endif %}
+            </a>
 
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="{{post.url}}">{{ post.title }}</a>
-            </h5>
-            <p class="card-text">{{ post.excerpt }}</p>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="{{post.url}}">{{ post.title }}</a>
+              </h5>
+              <p class="card-text">{{ post.excerpt }}</p>
+            </div>
           </div>
         </div>
-      </div>
       {% endfor %}
     </div>
   </div>
