@@ -5,6 +5,25 @@ $pink: #EA21AA
 $image-background: #0C3658
 $yellow: #FFF004
 
+@mixin build-bandeau($color)
+  padding: 100px 0
+  &:before
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    display: block
+    content: ''
+    position: absolute
+    height: 100%
+    width: 120px
+    z-index: 8
+    background: $color
+
+  img
+    position: relative
+    z-index: 9
+
+
 body
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter"
 
@@ -43,25 +62,10 @@ a
       font-size: 1.5rem
 
 .bandeau
-  padding: 100px 0
-  &::before
-    top: 0
-    left: 50%
-    transform: translateX(-50%)
-    display: block
-    content: ''
-    position: absolute
-    height: 100%
-    width: 120px
-    background: $pink
-    z-index: 8
+  @include build-bandeau($pink)
 
-    &.yellow
-      background: $yellow
-
-  img
-    position: relative
-    z-index: 9
+.yellow-bandeau
+  @include build-bandeau($yellow)
 
 #central-grid
   margin-top: 50px
@@ -73,6 +77,9 @@ a
     background-color: $image-background
     padding-top: 6rem !important
     padding-bottom: 2rem !important
+
+    .images-masonry
+      padding-left: 75px
 
     .card-item
       margin-bottom: 80px

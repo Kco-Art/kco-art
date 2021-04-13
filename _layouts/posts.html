@@ -30,7 +30,7 @@
               {% assign imageName = page.images | first %}
               {% assign image = site.data.images | where: "identifier", imageName | first %}
               <div class="col-sm-4 offset-sm-1">
-                <div class="bandeau yellow">
+                <div class="yellow-bandeau">
                   <img class="img-fluid" src="/images{{ image.path }}">
                 </div>
               </div>
@@ -38,7 +38,6 @@
           {% else %}
             <div class="row">
               <div class="col-sm-8 offset-sm-2">
-
                 <div class="row mb-5">
                   <h1>
                     {{ page.title }}
@@ -55,15 +54,17 @@
 
       {% if page.images.size > 1 %}
         <div id="images" class="row">
-          <div class="col-sm-8 offset-sm-2 images-masonry">
-            {% for imageName in page.images %}
-              {% assign image = site.data.images | where: "identifier", imageName | first %}
-              <div class="card-item">
-                <div class="card">
-                  <img src="/images{{ image.path }}" class="card-img-top">
+          <div class="col-sm-8 offset-sm-2 ">
+            <div class="images-masonry">
+              {% for imageName in page.images %}
+                {% assign image = site.data.images | where: "identifier", imageName | first %}
+                <div class="card-item">
+                  <div class="card">
+                    <img src="/images{{ image.path }}" class="card-img-top">
+                  </div>
                 </div>
-              </div>
-            {% endfor %}
+              {% endfor %}
+            </div>
           </div>
         </div>
       {% endif %}
