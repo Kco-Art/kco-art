@@ -26,4 +26,11 @@ $(window).scroll(function() {
       percentPosition: true
     })
   });
+  var $imagesGrid = $('.images-masonry').imagesLoaded( function() {
+    $imagesGrid.masonry({
+      itemSelector: '.card-item',
+      gutter: 80,
+      percentPosition: true
+    })
+  });
 })(jQuery);

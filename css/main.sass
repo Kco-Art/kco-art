@@ -3,6 +3,7 @@
 
 $pink: #EA21AA
 $image-background: #0C3658
+$yellow: #FFF004
 
 body
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter"
@@ -51,9 +52,12 @@ a
     content: ''
     position: absolute
     height: 100%
-    width: 150px
+    width: 120px
     background: $pink
     z-index: 8
+
+    &.yellow
+      background: $yellow
 
   img
     position: relative
@@ -67,6 +71,11 @@ a
 #posts
   #images
     background-color: $image-background
+    padding-top: 6rem !important
+    padding-bottom: 2rem !important
+
+    .card-item
+      margin-bottom: 80px
 
 footer
   height: 100px

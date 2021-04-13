@@ -12,33 +12,64 @@
     {% include navbar.html %}
     <div id="posts" class="container-fluid">
       <div class="row">
-        <div class="col-sm-8 offset-sm-2">
+        <div class="col-sm-10 offset-sm-1">
+          {% if page.images.size == 1 %}
+            <div class="row">
+              <div class="col-sm-4 offset-sm-2">
 
-          <div class="row mb-5">
-            <h1>
-              {{ page.title }}
-            </h1>
-          </div>
-          <div class="row mb-5">
-              {{ content }}
-          </div>
-        </div>
-      </div>
-      <div id="images" class="row pt-5 pb-5">
-        <div class="col-sm-8 offset-sm-2 masonry">
-          {% for imageName in page.images %}
-            {% assign image = site.data.images | where: "identifier", imageName | first %}
-            <div class="card-item mb-5 ml-5">
-              <div class="card">
-                <img src="/images{{ image.path }}" class="card-img-top">
+                <div class="row mb-5">
+                  <h1>
+                    {{ page.title }}
+                  </h1>
+                </div>
+                <div class="row mb-5">
+                    {{ content }}
+                </div>
+              </div>
+
+              {% assign imageName = page.images | first %}
+              {% assign image = site.data.images | where: "identifier", imageName | first %}
+              <div class="col-sm-4 offset-sm-1">
+                <div class="bandeau yellow">
+                  <img class="img-fluid" src="/images{{ image.path }}">
+                </div>
               </div>
             </div>
-          {% endfor %}
+          {% else %}
+            <div class="row">
+              <div class="col-sm-8 offset-sm-2">
+
+                <div class="row mb-5">
+                  <h1>
+                    {{ page.title }}
+                  </h1>
+                </div>
+                <div class="row mb-5">
+                    {{ content }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
         </div>
       </div>
+
+      {% if page.images.size > 1 %}
+        <div id="images" class="row">
+          <div class="col-sm-8 offset-sm-2 images-masonry">
+            {% for imageName in page.images %}
+              {% assign image = site.data.images | where: "identifier", imageName | first %}
+              <div class="card-item">
+                <div class="card">
+                  <img src="/images{{ image.path }}" class="card-img-top">
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
       {% include footer.html %}
     </div>
     {% include scripts.html %}
   </body>
 </html>
-
