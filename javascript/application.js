@@ -20,6 +20,8 @@ $(window).scroll(function() {
 
 (function ($) {
   var $grid = $('.masonry').imagesLoaded( function() {
+    $("#loader-wrapper").remove()
+    $grid.removeClass("d-none")
     $grid.masonry({
       itemSelector: '.card-item',
       gutter: 15,
@@ -27,6 +29,8 @@ $(window).scroll(function() {
     })
   });
   var $imagesGrid = $('.images-masonry').imagesLoaded( function() {
+    $("#loader-wrapper").remove()
+    $imagesGrid.removeClass("d-none")
     $imagesGrid.masonry({
       itemSelector: '.card-item',
       gutter: 80,

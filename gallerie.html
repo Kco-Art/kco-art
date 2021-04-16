@@ -3,7 +3,11 @@ layout: default
 title: Gallery
 ---
 
-<div id="central-grid" class="masonry">
+<div id="loader-wrapper">
+  <div id="loader"></div>
+</div>
+
+<div id="central-grid" class="masonry d-none">
   {% for element in site.data.gallery %}
     {% assign image = site.data.images | where: "identifier", element | first %}
     <div class="card-item mb-3">

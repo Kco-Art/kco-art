@@ -12,8 +12,10 @@ title: Home
 <div class="row">
 
   <div class="col-sm-10 offset-sm-1">
-    <div id="central-grid" class="masonry">
-
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+    </div>
+    <div id="central-grid" class="masonry d-none">
       {% for card in site.data.home_grid %}
         <div class="card-item mb-3">
           <div class="card">
